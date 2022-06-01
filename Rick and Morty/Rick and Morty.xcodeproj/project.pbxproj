@@ -17,6 +17,7 @@
 		EDA4AD702847C43B00D6E919 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4AD6F2847C43B00D6E919 /* Character.swift */; };
 		EDA4AD722847C4C700D6E919 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4AD712847C4C700D6E919 /* CharacterTableViewCell.swift */; };
 		EDA4AD742847C4E500D6E919 /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4AD732847C4E500D6E919 /* NetworkingController.swift */; };
+		EDA4AD762847C87200D6E919 /* ResultError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4AD752847C87200D6E919 /* ResultError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EDA4AD6F2847C43B00D6E919 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		EDA4AD712847C4C700D6E919 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 		EDA4AD732847C4E500D6E919 /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
+		EDA4AD752847C87200D6E919 /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				EDA4AD732847C4E500D6E919 /* NetworkingController.swift */,
+				EDA4AD752847C87200D6E919 /* ResultError.swift */,
 			);
 			path = "Networking Controller";
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				EDA4AD702847C43B00D6E919 /* Character.swift in Sources */,
 				EDA4AD742847C4E500D6E919 /* NetworkingController.swift in Sources */,
 				EDA4AD562847B85000D6E919 /* SceneDelegate.swift in Sources */,
+				EDA4AD762847C87200D6E919 /* ResultError.swift in Sources */,
 				EDA4AD6C2847BFFA00D6E919 /* CharacterDetailsViewController.swift in Sources */,
 				EDA4AD722847C4C700D6E919 /* CharacterTableViewCell.swift in Sources */,
 			);
