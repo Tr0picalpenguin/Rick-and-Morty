@@ -22,7 +22,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="2o6-1E-1Ry" style="IBUITableViewCellStyleDefault" id="9Y4-8k-DhD">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="characterCell" textLabel="2o6-1E-1Ry" style="IBUITableViewCellStyleDefault" id="9Y4-8k-DhD" customClass="CharacterTableViewCell" customModule="Rick_and_Morty" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Y4-8k-DhD" id="k55-db-Uwq">
@@ -39,6 +39,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="characterNameLabel" destination="2o6-1E-1Ry" id="HJI-eG-fNZ"/>
                                     <segue destination="0IA-HK-Ylc" kind="show" identifier="toDetailVC" id="RmL-ng-0lh"/>
                                 </connections>
                             </tableViewCell>
