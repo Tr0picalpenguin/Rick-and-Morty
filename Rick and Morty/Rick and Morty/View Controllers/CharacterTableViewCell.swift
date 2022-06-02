@@ -22,6 +22,10 @@ class CharacterTableViewCell: UITableViewCell {
         self.image = nil
     }
 
+    
+    // MARK: - TODO: Figure out why the images are at a default size until they re-queue to the new size.
+    
+    
     func setConfiguration(with character: ResultsDictionary) {
         fetchImage(for: character)
         var configuration = defaultContentConfiguration()
@@ -44,21 +48,7 @@ class CharacterTableViewCell: UITableViewCell {
             }
         }
     }
-//
-//
-//    func fetchCharacterName(for character: ResultsDictionary) {
-//        NetworkingController.fetchTopLevelDictionary(with: character.name) { result in
-//            switch result {
-//            case.success(let character):
-//                DispatchQueue.main.async {
-//                    self.characterNameLabel.text = character.name
-//                }
-//            case.failure(let error):
-//                print("There was an error!", error.errorDescription!)
-//            }
-//        }
-//
-//    }
+
     
     override func updateConfiguration(using state: UICellConfigurationState) {
         super.updateConfiguration(using: state)

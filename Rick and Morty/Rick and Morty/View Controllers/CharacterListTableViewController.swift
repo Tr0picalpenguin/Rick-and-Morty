@@ -31,8 +31,6 @@ class CharacterListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return characterList.count
     }
@@ -43,13 +41,18 @@ class CharacterListTableViewController: UITableViewController {
         
         let character = characterList[indexPath.row]
         cell.setConfiguration(with: character)
-
-
         return cell
     }
     
+    // MARK: - TODO: Pagination ..... We need this to view more than 20 characters.
+    
+    
+    
+    
+    
     // MARK: - Navigation
-
+    
+        // Segue needs some work.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailVC" {
             if let indexPath = tableView.indexPathForSelectedRow {
@@ -61,3 +64,7 @@ class CharacterListTableViewController: UITableViewController {
                 }
             }
 } // End of class
+
+
+
+// MARK: - TODO: Searchbar functionality
