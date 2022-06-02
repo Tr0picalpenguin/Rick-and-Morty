@@ -131,6 +131,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4MD-vX-7ah"/>
+                    <connections>
+                        <outlet property="characterImage" destination="A2f-dZ-xYg" id="CxS-co-hdE"/>
+                        <outlet property="characterNameLabel" destination="62A-5e-37M" id="iE9-ul-kD9"/>
+                        <outlet property="currentLocationLabel" destination="ryr-IU-yhY" id="DcD-yT-O7K"/>
+                        <outlet property="genderLabel" destination="qms-6t-C25" id="Ste-mP-pb3"/>
+                        <outlet property="idLabel" destination="4qO-2R-cPZ" id="LEV-if-TzU"/>
+                        <outlet property="nameLabel" destination="62A-5e-37M" id="6L3-iR-jhm"/>
+                        <outlet property="originLabel" destination="1oU-Jt-O30" id="GBw-Eu-uh3"/>
+                        <outlet property="speciesLabel" destination="xtm-We-uqP" id="vJt-DP-wU0"/>
+                        <outlet property="statusLabel" destination="zu6-B2-ePf" id="BAw-QV-key"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LxJ-uo-Idw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

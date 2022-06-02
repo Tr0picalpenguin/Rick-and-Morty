@@ -10,10 +10,22 @@ import UIKit
 class CharacterListTableViewController: UITableViewController {
 
     var characterList: [ResultsDictionary] = []
+    var topLevelDictionary: TopLevelDictionary?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        NetworkingController.fetchTopLevelDictionary(with: URL(string: "https://rickandmortyapi.com/api/character")!) { [weak self] result in
+            switch result {
+            case.success(let topLevelDictionary):
+                self?.characterList = topLevelDictionary.results
+                self?.topLevelDictionary = topLevelDictionary
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            case.failure(let error):
+                print("There was an error!", error.errorDescription!)
+            }
+        }
        
     }
 
@@ -30,24 +42,22 @@ class CharacterListTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell", for: indexPath) as? CharacterTableViewCell else {return UITableViewCell()}
         
         let character = characterList[indexPath.row]
-        cell.updateViews(with: character.name)
+        cell.setConfiguration(with: character)
 
 
         return cell
     }
     
-
-   
-
- 
-
-   
-
-
     // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
-    }
-   
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailVC" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                if let destination = segue.destination as? CharacterDetailsViewController {
+                    let characterToSend = characterList[indexPath.row]
+                    destination.character = characterToSend
+                        }
+                    }
+                }
+            }
 } // End of class
