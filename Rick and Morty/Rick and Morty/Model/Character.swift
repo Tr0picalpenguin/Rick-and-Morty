@@ -8,10 +8,14 @@
 import Foundation
 
 struct TopLevelDictionary: Decodable {
-    private enum CodingKeys: String, CodingKey {
-        case results = "results"
-    }
+    let info: Info
     let results: [ResultsDictionary]
+}
+struct Info: Decodable {
+    private enum CodingKeys: String, CodingKey {
+        case nextURL = "next"
+    }
+    let nextURL: String
 }
 
 struct ResultsDictionary: Decodable {
@@ -36,16 +40,10 @@ struct ResultsDictionary: Decodable {
 }
 
 struct OriginDictionary: Decodable {
-    private enum CodingKeys: String, CodingKey {
-        case name
-    }
     let name: String
 }
 
 struct LocationDictionary: Decodable {
-    private enum CodingKeys: String, CodingKey {
-        case name
-    }
     let name: String
 }
 

@@ -50,6 +50,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="DDK-4r-CUp"/>
+                    <connections>
+                        <outlet property="characterSearchBar" destination="ScV-Vm-yN5" id="gVv-CW-hVR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rf-wN-dZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,7 +136,6 @@
                     <navigationItem key="navigationItem" id="4MD-vX-7ah"/>
                     <connections>
                         <outlet property="characterImage" destination="A2f-dZ-xYg" id="CxS-co-hdE"/>
-                        <outlet property="characterNameLabel" destination="62A-5e-37M" id="iE9-ul-kD9"/>
                         <outlet property="currentLocationLabel" destination="ryr-IU-yhY" id="DcD-yT-O7K"/>
                         <outlet property="genderLabel" destination="qms-6t-C25" id="Ste-mP-pb3"/>
                         <outlet property="idLabel" destination="4qO-2R-cPZ" id="LEV-if-TzU"/>

@@ -21,7 +21,7 @@ class CharacterDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
     }
     
@@ -30,43 +30,33 @@ class CharacterDetailsViewController: UIViewController {
             updateViews()
         }
     }
-    var origin: OriginDictionary? {
-        didSet {
-            updateViews()
-        }
-    }
-    var location: LocationDictionary? {
-        didSet {
-            updateViews()
-        }
-    }
-
+    
+    
     func updateViews() {
         guard let character = character else {
             return
         }
-        NetworkingController.fetchImage(with: character.imageString ?? "Photo Unavailable") { result in
+        NetworkingController.fetchImage(with: character.imageString ?? "Photo Unavailable") { [weak self] result in
             switch result {
             case.success(let image):
                 DispatchQueue.main.async {
-                    self.characterImage.image = image
-                   
+                    self?.characterImage.image = image
+                    self?.nameLabel.text = character.name
+                    self?.statusLabel.text = "Status: \(character.status)"
+                    self?.speciesLabel.text = character.species
+                    self?.genderLabel.text = character.gender
+                    self?.idLabel.text = "Character No:\(character.id)"
+                    self?.originLabel.text = character.origin.name
+                    self?.currentLocationLabel.text = character.location.name
                 }
             case.failure(let error):
                 print("There was an error!", error.errorDescription!)
             }
         }
         
-        self.character = character
-        self.nameLabel.text = character.name
-        self.statusLabel.text = character.status
-        self.speciesLabel.text = character.species
-        self.genderLabel.text = character.gender
-        self.idLabel.text = "Character No:\(character.id)"
-        self.originLabel.text = self.origin?.name
-        self.currentLocationLabel.text = self.location?.name
         
-
+        
+        
     }
-
+    
 } // End of class

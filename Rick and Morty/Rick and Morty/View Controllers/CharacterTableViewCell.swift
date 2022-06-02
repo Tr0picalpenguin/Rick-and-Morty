@@ -8,20 +8,14 @@
 import UIKit
 
 class CharacterTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var characterNameLabel: UILabel!
-
+    
     var image: UIImage? {
         didSet {
             setNeedsUpdateConfiguration()
         }
-    }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        self.image = nil
-    }
-
+    }    
     
     // MARK: - TODO: Figure out why the images are at a default size until they re-queue to the new size.
     
@@ -48,7 +42,7 @@ class CharacterTableViewCell: UITableViewCell {
             }
         }
     }
-
+    
     
     override func updateConfiguration(using state: UICellConfigurationState) {
         super.updateConfiguration(using: state)
